@@ -1,7 +1,22 @@
-<ActionBar class="action-bar">
-    <Label class="action-bar-title" text="Home"></Label>
-</ActionBar>
 
+<ActionBar title="My App" class="action-bar"></ActionBar>
+  
 <GridLayout class="page">
-    <!-- Add your page content here -->
+    <ScrollView class="page">
+		<StackLayout class="home-panel">
+            <Image src="https://user-images.githubusercontent.com/544280/42960643-66d498ac-8b5a-11e8-8946-7224eefea6a5.jpg"></Image>
+			<Label text = "siema"> </Label>
+			<Label text="🔥 NativeScript 🔥" fontSize="40"></Label>
+			<Label textWrap="true" text="Write code in the editor or drag and drop components to build a NativeScript mobile application."
+			 class="h2 description-label"></Label>
+			<Label textWrap="true" text="Scan the QR code with your mobile device and watch the changes sync live while you play with the code."
+			 class="h2 description-label"></Label>
+		</StackLayout>
+    </ScrollView>
+    <RadCartesianChart>
+        <CategoricalAxis tkCartesianHorizontalAxis></CategoricalAxis>
+        <LinearAxis tkCartesianVerticalAxis></LinearAxis>
+        <BarSeries tkCartesianSeries [items]="favoriteFruits" categoryProperty="type" valueProperty="count"></BarSeries>
+    </RadCartesianChart>
+
 </GridLayout>
